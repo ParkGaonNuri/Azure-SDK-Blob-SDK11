@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    azure:
+      credential:
+        managed-identity-enabled: true
+      storage:
+        blob:
+          account-name: nuridevlog
+          container-name: nuri
+          endpoint: https://nuridevlog.blob.core.windows.net/
+#spring:
+#  cloud:
+#    azure:
+#      storage:
+#        blob:
+#          connection-string: DefaultEndpointsProtocol=
