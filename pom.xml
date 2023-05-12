@@ -77,9 +77,9 @@
 		    	<artifactId>azure-webapp-maven-plugin</artifactId>
 		    	<version>2.11.0</version>
 		    	<configuration>
-					<subscriptionId>2b4172ff-48eb-4e2b-91f3-ccc0301269f2</subscriptionId>
-					<resourceGroup>nuri-dev-rg</resourceGroup>
-					<appName>nuri-dev-app</appName>
+					<subscriptionId><Subscription Name></subscriptionId>
+					<resourceGroup><Resource Group Name></resourceGroup>
+					<appName><App Service Name></appName>
 					<region>koreacentral</region>
 					<runtime>
 						<os>Linux</os>
