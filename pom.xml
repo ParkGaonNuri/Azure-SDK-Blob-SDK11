@@ -16,46 +16,47 @@
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud-azure.version>4.7.0</spring-cloud-azure.version>
+		<tomcat.version>9.0.70</tomcat.version>
 	</properties>
 	<dependencies>
+		<dependency>
+    		<groupId>com.azure</groupId>
+    		<artifactId>azure-identity</artifactId>
+    		<version>1.8.2</version>
+    		<scope>compile</scope>
+		</dependency>
 		<dependency>
 		    <groupId>com.microsoft.azure</groupId>
 		    <artifactId>azure-webapp-maven-plugin</artifactId>
 		    <version>2.11.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.azure.spring</groupId>
-			<artifactId>spring-cloud-azure-starter-active-directory</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.azure.spring</groupId>
-			<artifactId>spring-cloud-azure-starter-keyvault</artifactId>
+		    <exclusions>
+				<exclusion>
+					<groupId>com.azure</groupId>
+					<artifactId>azure-identity</artifactId>
+				</exclusion>
+		    </exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.azure.spring</groupId>
-			<artifactId>spring-cloud-azure-starter-storage</artifactId>
+			<artifactId>spring-cloud-azure-starter-storage-blob</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>com.azure</groupId>
+					<artifactId>azure-identity</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
