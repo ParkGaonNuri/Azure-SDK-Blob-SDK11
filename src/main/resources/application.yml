@@ -5,7 +5,7 @@ spring:
         managed-identity-enabled: true
       storage:
         blob:
-          account-name: nuridevlog
-          container-name: nuri
-          endpoint: https://nuridevlog.blob.core.windows.net/
+          account-name: <Storage Account Name>
+          container-name: <Container Name>
+          endpoint: <Storage Endpoint>
           
